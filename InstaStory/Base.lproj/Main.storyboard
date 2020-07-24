@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QIq-6d-vEg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Insta Collection Contoller-->
+        <scene sceneID="Eo7-LD-Gfd">
+            <objects>
+                <collectionViewController id="QIq-6d-vEg" customClass="InstaCollectionContoller" customModule="InstaStory" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" id="m9N-nr-f0N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewLayout key="collectionViewLayout" id="bJv-pa-e4L"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InstaCollectionViewCell" id="6LK-Vz-UfF" customClass="InstaCollectionViewCell" customModule="InstaStory" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4na-jP-gSJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCK-Zj-CBc" customClass="PlayerView" customModule="InstaStory" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <gestureRecognizers/>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="NCK-Zj-CBc" secondAttribute="trailing" id="23K-04-tME"/>
+                                        <constraint firstItem="NCK-Zj-CBc" firstAttribute="leading" secondItem="4na-jP-gSJ" secondAttribute="leading" id="5um-9X-aEt"/>
+                                        <constraint firstAttribute="bottom" secondItem="NCK-Zj-CBc" secondAttribute="bottom" id="GPq-jy-ShI"/>
+                                        <constraint firstItem="NCK-Zj-CBc" firstAttribute="top" secondItem="4na-jP-gSJ" secondAttribute="top" id="jYQ-Ya-7sM"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="playerView" destination="NCK-Zj-CBc" id="tUK-ep-9jG"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InstaImageCell" id="TXh-Ug-GZU" customClass="InstaImageCell" customModule="InstaStory" customModuleProvider="target">
+                                <rect key="frame" x="60.5" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Iw8-Lu-ej0">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hp" translatesAutoresizingMaskIntoConstraints="NO" id="HXt-q2-wY5">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HXt-q2-wY5" firstAttribute="leading" secondItem="Iw8-Lu-ej0" secondAttribute="leading" id="2gv-VW-acH"/>
+                                        <constraint firstAttribute="trailing" secondItem="HXt-q2-wY5" secondAttribute="trailing" id="JqU-k4-udE"/>
+                                        <constraint firstAttribute="bottom" secondItem="HXt-q2-wY5" secondAttribute="bottom" id="m2T-QD-fEe"/>
+                                        <constraint firstItem="HXt-q2-wY5" firstAttribute="top" secondItem="Iw8-Lu-ej0" secondAttribute="top" id="ya8-KF-6xx"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="image" destination="HXt-q2-wY5" id="6eK-FS-qgq"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="QIq-6d-vEg" id="Un2-8Z-Lkg"/>
+                            <outlet property="delegate" destination="QIq-6d-vEg" id="ez8-UL-o5J"/>
+                            <outletCollection property="gestureRecognizers" destination="J1Y-sL-RTa" appends="YES" id="eND-Bv-ks5"/>
+                            <outletCollection property="gestureRecognizers" destination="Has-tD-H3F" appends="YES" id="gXE-H3-yGw"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3kJ-jO-hja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.10000000000000001" id="J1Y-sL-RTa">
+                    <connections>
+                        <action selector="onTouch:" destination="QIq-6d-vEg" id="Ymg-jH-PMU"/>
+                        <outlet property="delegate" destination="QIq-6d-vEg" id="g6h-dr-KfE"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="Has-tD-H3F">
+                    <connections>
+                        <action selector="onTapped:" destination="QIq-6d-vEg" id="ajd-T3-o1R"/>
+                        <outlet property="delegate" destination="QIq-6d-vEg" id="34y-HI-kam"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-707.24637681159425" y="43.526785714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hp" width="960" height="619"/>
+    </resources>
+</document>
